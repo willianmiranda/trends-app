@@ -1,0 +1,13 @@
+<div class="video-container">
+  <div class="video-load"
+    *ngIf="isLoading">
+    <div class="loader"></div>
+  </div>
+  <iframe class="video-embed"
+    frameborder="0"
+    allowfullscreen
+    [hidden]="isLoading"
+    [src]="embedUrl"
+    (load)="stopLoading()">
+  </iframe>
+</div>
